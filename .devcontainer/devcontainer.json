@@ -1,5 +1,11 @@
 {
-	"name": "Rust Dev Container",
+	"name": "Rust",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VARIANT": "1-1-bookworm"
+		}
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -14,10 +20,11 @@
 			]
 		},
 		"settings": {
+			"lldb.executable": "/usr/bin/lldb",
 			"editor.formatOnSave": true,
-			"files.exclude": {
+			"files.watcherExclude": {
+				"**/target/**": true
 			}
 		}
-	},
-	"dockerFile": "Dockerfile"
+	}
 }

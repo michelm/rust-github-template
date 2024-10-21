@@ -1,4 +1,5 @@
-FROM mcr.microsoft.com/vscode/devcontainers/rust:bookworm
+ARG VARIANT=bookworm
+FROM mcr.microsoft.com/vscode/devcontainers/rust:${VARIANT}
 
 # Improve lld linker to improve build times either by setting the following
 # environment variable:
@@ -7,7 +8,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/rust:bookworm
 #   [build]
 #   rustflags = ["-C", "link-arg=-fuse-ld=lld"]
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install clang lld \
+    && apt-get -y install clang lld lldb \
     && apt-get autoremove -y && apt-get clean -y
 
 RUN rustup install nightly
