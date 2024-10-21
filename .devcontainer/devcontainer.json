@@ -1,0 +1,21 @@
+{
+	"name": "Rust Dev Container",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"cschleiden.vscode-github-actions",
+				"ms-vsliveshare.vsliveshare",
+				"matklad.rust-analyzer",
+				"barbosshack.crates-io",
+				"vadimcn.vscode-lldb",
+				"fill-labs.dependi"
+			]
+		},
+		"settings": {
+			"editor.formatOnSave": true,
+			"files.exclude": {
+			}
+		}
+	},
+	"dockerFile": "Dockerfile"
+}
