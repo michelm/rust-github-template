@@ -6,6 +6,8 @@
 				"cschleiden.vscode-github-actions",
 				"ms-vsliveshare.vsliveshare",
 				"matklad.rust-analyzer",
+				"github.copilot",
+				"github.copilot-chat",
 				"barbosshack.crates-io",
 				"vadimcn.vscode-lldb",
 				"fill-labs.dependi"
