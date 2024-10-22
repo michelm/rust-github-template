@@ -7,8 +7,7 @@ fn main() {
 
     let left = 34;
     let right = 27;
-            let sum = rust_github_template::add(left, right);
+    let sum = rust_github_template::add(left, right);
 
-        println!("{} + {} = {}", left, right, sum);
-    
-        }
+    println!("{} + {} = {}", left, right, sum);
+}
