@@ -1,3 +1,5 @@
+[![Tests](https://github.com/michelm/rust-github-template/actions/workflows/tests.yml/badge.svg)](https://github.com/michelm/rust-github-template/actions/workflows/tests.yml)
+
 # rust-github-template
 
 Rust - GitHub project template.
