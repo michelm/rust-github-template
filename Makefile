@@ -30,7 +30,11 @@ run:
 test:
 	cargo test
 
+doc:
+	cargo doc
+
 clean:
 	cargo clean
 
-all: format lint test run
+all: clean format lint test build release doc
+
