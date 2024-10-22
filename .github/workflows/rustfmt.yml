@@ -1,9 +1,9 @@
-name: Rustfmt
+name: Format and Commit
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  format-and-commit:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,5 +14,12 @@ jobs:
           profile: minimal
           components: clippy, rustfmt
           override: true
-      - name: Format code (rustfmt)
+      - name: Format code
         run: make format
+      - name: Commit changes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "github-actions@github.com"
+          git add .
+          git commit -m "Format code"
+          git push

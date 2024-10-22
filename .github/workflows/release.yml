@@ -3,7 +3,7 @@ name: Build binary release
 on: [push, pull_request]
 
 jobs:
-  build:
+  build-release:
     runs-on: ubuntu-latest
 
     steps:
