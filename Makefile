@@ -39,8 +39,9 @@ build:
 release:
 	cargo build --release
 
+# make run args="-- arg1 arg2"
 run:
-	cargo run -- $(RUNARGS)
+	cargo run $(args)
 
 test:
 	cargo test
