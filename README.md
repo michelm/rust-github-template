@@ -1,4 +1,5 @@
 [![Tests](https://github.com/michelm/rust-github-template/actions/workflows/tests.yml/badge.svg)](https://github.com/michelm/rust-github-template/actions/workflows/tests.yml)
+[![Build](https://github.com/michelm/rust-github-template/actions/workflows/build.yml/badge.svg)](https://github.com/michelm/rust-github-template/actions/workflows/build.yml)
 
 # rust-github-template
 
