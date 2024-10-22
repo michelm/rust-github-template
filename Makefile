@@ -1,24 +1,51 @@
-rust-version:
-	@echo "Rust command-line utility versions:"
-	rustc --version 			#rust compiler
-	cargo --version 			#rust package manager
-	rustfmt --version			#rust code formatter
-	rustup --version			#rust toolchain manager
-	clippy-driver --version		#rust linter
+version2:
+	@echo "==[rustc: compiler]===="
+	@rustc --version
+	@echo ""
+	@echo "==[rustup: toolchain installer]===="
+	@rustup --version
+	@echo ""
+	@echo "==[cargo: package manager]===="
+	@cargo --version
+	@echo ""
+	@echo "==[rustfmt: code formatter rustfmt]===="
+	@rustfmt --version
+	@echo ""
+	@echo "==[clippy: code checker]===="
+	@cargo clippy --version
+	@echo ""
+
+version:
+	rustc --version
+	@echo ""
+	rustup --version
+	@echo ""
+	cargo --version
+	@echo ""
+	cargo fmt --version
+	@echo ""
+	cargo clippy --version
+	@echo ""
 
 format:
-	cargo fmt --quiet
+	cargo fmt --verbose
 
 lint:
-	cargo clippy --quiet
+	cargo clippy
 
-test:
-	cargo test --quiet
-
-run:
-	cargo run
+build:
+	cargo build
 
 release:
 	cargo build --release
+
+run:
+	cargo run -- $(RUNARGS)
+
+test:
+	cargo test
+
+clean:
+	cargo clean
 
 all: format lint test run
