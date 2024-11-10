@@ -9,11 +9,11 @@ struct Args {
     operator: String,
 
     /// Argument #1; augend|minuend|multiplier|numerator
-    #[arg(short='x', long)]
+    #[arg(short = 'x', long)]
     first: i32,
 
     /// Argument #2; addend|subtrahend|multiplicand|denominator
-    #[arg(short='y', long)]
+    #[arg(short = 'y', long)]
     second: i32,
 }
 
