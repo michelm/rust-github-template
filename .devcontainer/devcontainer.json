@@ -16,14 +16,18 @@
 				"github.copilot-chat",
 				"barbosshack.crates-io",
 				"vadimcn.vscode-lldb",
-				"fill-labs.dependi"
+				"fill-labs.dependi",
+				"bytecodealliance.wit-idl"
 			]
 		},
 		"settings": {
 			"lldb.executable": "/usr/bin/lldb",
 			"editor.formatOnSave": true,
+			"editor.inlayHints.enabled": "offUnlessPressed",
+			"makefile.configureOnOpen": false,
 			"files.watcherExclude": {
-				"**/target/**": true
+				"**/target/**": true,
+				"**/build/**": true
 			}
 		}
 	}
